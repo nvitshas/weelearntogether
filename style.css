@@ -80,6 +80,9 @@ blockquote {
   transition: 0.3s;
 }
 
+.font-handwritten { font-family: 'Dancing Script', cursive; }
+
+
 .italic-btn {
   font-style: italic;
 }
