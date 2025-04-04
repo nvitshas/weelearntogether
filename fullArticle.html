@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homeschooling on the Go: Our Journey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        /* Auto-focus on article content */
+        html { scroll-behavior: smooth; }
+        .focus-target:target { animation: highlight 1.5s ease; }
+        @keyframes highlight { 0% { background-color: #fff8e1; } 100% { background-color: transparent; } }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Article Header -->
+        <header class="mb-4">
+            <h1>Homeschooling on the Go: Our Journey with My Daughters</h1>
+            <p class="text-muted">Posted on <time datetime="2023-11-15">November 15, 2023</time></p>
+        </header>
+
+        <!-- Full Article Content (with focus target) -->
+        <article id="article-focus" class="focus-target">
+            <!-- Opening Paragraph (same as excerpt) -->
+            <p class="lead">As a mother of two beautiful girls, aged 1 and 7, I’ve found that homeschooling is not just about education—it’s about creating a life rich with experiences, curiosity, and creativity.</p>
+
+            <!-- Hidden Content (now visible) -->
+            <section>
+                <h2>Travel as Our Classroom</h2>
+                <p>Details about your travel-based learning approach...</p>
+                <img src="../images/travel-learning.jpg" alt="Children learning during travel" class="img-fluid my-3 rounded">
+            </section>
+
+            <section>
+                <h2>Multilingual Adventures</h2>
+                <p>How you incorporate language learning...</p>
+            </section>
+
+            <section>
+                <h2>Art-Infused Curriculum</h2>
+                <p>Your fine arts integration strategies...</p>
+            </section>
+
+            <!-- Back Link -->
+            <div class="mt-5">
+                <a href="blog.html" class="btn btn-outline-primary">← Back to Blog</a>
+            </div>
+        </article>
+    </div>
+
+    <!-- Auto-focus script -->
+    <script>
+        window.onload = function() {
+            if (window.location.hash === "#article-focus") {
+                document.getElementById("article-focus").scrollIntoView();
+            }
+        };
+    </script>
+</body>
+</html>
+

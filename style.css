@@ -51,6 +51,111 @@ section {
   margin: 40px 0;
 }
 
+
+/* For paragraph indents */
+.indent {
+  text-indent: 2em;  /* Adjust the value (e.g., 1.5em, 30px) */
+  margin-left: 0;    /* Resets any default margins */
+  /* Add spacing between paragraphs */
+  margin-bottom: 1em;
+}
+
+/* For blockquote indents */
+blockquote {
+  margin-left: 2em;
+  padding-left: 1em;
+  border-left: 3px solid #eee; /* Optional decorative line */
+}
+
+.bold-italic {
+  font-weight: bold;
+  font-style: italic;
+  /* Bonus: Add custom color */
+  color: #4a6fa5; 
+}
+
+.bold-italic:hover {
+  transform: skewX(-10deg);
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.italic-btn {
+  font-style: italic;
+}
+
+/* Modern bullet style */
+ul {
+  list-style-type: none; /* Removes default bullets */
+  padding-left: 1em; /* Indent list */
+}
+
+ul li {
+  position: relative;
+  padding-left: 1.5em; /* Space for custom bullet */
+  margin-bottom: 0.5em;
+}
+
+ul li::before {
+  content: "•"; /* Custom bullet symbol */
+  color: #6c757d; /* Bootstrap's secondary color */
+  font-size: 1.2em;
+  position: absolute;
+  left: 0;
+}
+
+ul.edu-bullets li::before {
+  content: "📚"; /* Book emoji */
+  color: #4a6fa5;
+}
+
+ul.rocket-bullets li::before {
+  content: "🚀"; 
+  color: #4a6fa5;
+  display: inline-block; /* Required for transforms */
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+
+ul.rocket-bullets li:hover::before {
+  transform: 
+    rotate(-15deg) /* Tilt left */
+    translateY(-2px); /* Lift slightly */
+    filter: hue-rotate(45deg); /* Fun color shift */
+  animation: wobble 0.5s ease infinite alternate; /* Continuous wobble */
+}
+
+/* Keyframes for wobble effect */
+@keyframes wobble {
+  0% { transform: rotate(-15deg) translateY(-2px); }
+  100% { transform: rotate(15deg) translateY(-2px); }
+}
+
+ul.arrow-bullets li::before {
+  content: "→"; /* Right arrow */
+  color: #ff6b6b;
+}
+
+ul.svg-bullets {
+  list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="%234a6fa5" d="M12 2L4 12l8 10 8-10z"/></svg>');
+}
+
+ul ul {
+  padding-left: 2em;
+}
+ul ul li::before {
+  content: "◦"; /* Hollow bullet */
+  color: #adb5bd;
+}
+
+/* Hovering rocket animation */
+.rocket-divider {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+.rocket-divider:hover {
+  transform: translateY(-5px) rotate(-10deg);
+}
+
 footer {
   text-align: center;
   padding: 20px;
